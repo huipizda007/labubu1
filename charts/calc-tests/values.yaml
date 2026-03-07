@@ -1,0 +1,4 @@
+image:
+  repository: calc-tests
+  tag: latest
+  pullPolicy: Never
