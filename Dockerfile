@@ -1,13 +1,11 @@
-FROM python:3.9-slim
+FROM python:3.12-slim
 
 WORKDIR /aaa
 
-COPY requirements.txt
+COPY requirements.txt .
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY calc.py
-COPY test_calc.py
+COPY . .
 
-CMD ["python", "-m", "unittest", "test_calc.py"]
-
+CMD ["python", "-m", "unittest", "-v", "test_calc.py"]
